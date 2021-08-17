@@ -30,9 +30,20 @@ However, looking at a histogram of the data I spotted a unreasonably large range
 The color one was rather simple, as the only thing were "None" entries instead of blank or NaN values in some samples. They could be easily excluded.
 
 ## Data analysis
+After cleaning the data, I wanted to closer inspect it and possibly train some machine learning models to predict cupping results of future samples.
 
 ### Correlation hunting
-
+I began by looking around for correlation between the total cup points or individual cupping metrics in the data. To do that I calculated the Pearson and Spearman coefficient for continous features and did scatter plots to inspect the data visually. For categorical features, I did one-hot encoding and tried to fit regression models. If I would have succeeded in fitting a regression model to the data predicting the cupping result one could assume that the two features are correlated.
+Sadly I didn't find any strong relation between the individual features and the cupping results.
 ### Regression
+To make it short: I tried various regression models with grid search for hyper parameter tuning, but all of them performed really bad and I quickly stopped investigating.
+### Classification
+After splitting the total cup scores into multiple classes, I applied k nearest neighbors and support vector classification and initially got solid results. However after looking a little closer I had to realize that this was due to skewness of the data and the models just classfying every sample the same.
+After performing under and oversampling the results looked better however with slight decreases in overall accuracy. The low sample size now really was a problem and more data would probably have helped.
 
 ## Conclusions
+Predicting coffee quality and tasting results based on metadata is not feasible. Especially not for everyday purchase decisions.
+
+Besides all the data analysis, please keep supporting your local roasters, try to buy fair traded coffee and do the maths. One kilogram of coffee for less than 10€ cannot be profitable for any farmer.
+
+So to sum all the research up: Buy whatever suits your taste and keep enjoying good coffee!
