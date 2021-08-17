@@ -15,7 +15,7 @@ Leading questions were:
 1. Can we predict coffe tasting results based on meta data about the bean?
 1. How relatable will the results be to our daily coffee drinking experience and purchase decisions?
 ## Data cleaning
-Eventhough the data was precleaned already, upon first review of the data I stumbled over some strange things which needed adjustment. In the end I had 41 features with 874 usable data samples. Some of the features contained less, but I did not use those for my investigations.
+Eventhough the data was precleaned already, upon first review of the data I stumbled over some strange things which needed adjustment. In the end I had 43 features with 874 usable data samples. Some of the features contained less, but I did not use those for my investigations.
 
 ### General
 1. Removal of unimportant features like: Farm name, Lot Number, Producer, Owner, ...
